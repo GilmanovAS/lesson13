@@ -5,8 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-candidates
-{{candidates}}
+{% for candidate_one in  candidates %}
+<p> {{ candidate_one.name}}: {{ candidate_one.position }} </p>
+{% endfor %}
 
 
 </body>
