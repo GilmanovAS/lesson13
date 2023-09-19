@@ -19,7 +19,7 @@ class TestCandidatesDAO:
         assert len(candidates) > 0, "Empty list"
         assert key_should_be == set(candidates[0].keys()), "Incorrect list"
 
-    def test_by_id(self, fix_candidates_dao):
+    def test_by_skill(self, fix_candidates_dao):
         candidate = fix_candidates_dao.get_by_skill('Dev')
         assert candidate[0]["pk"] == 2, "Inccorect number"
         assert key_should_be == set(candidate[0].keys()), "Inccorect number"

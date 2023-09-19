@@ -1,3 +1,4 @@
+""" It's vacancies file"""
 from flask import Blueprint, render_template
 
 from app.vacancies_bp.dao_vacancies.vacancies_dao_f import VacanciesDAO
@@ -8,6 +9,8 @@ vacancies_blueprint = Blueprint('vacancies_blueprint', __name__, template_folder
 
 @vacancies_blueprint.route('/vacancies/')
 def vacancies_page():
+    """It's vacation page"""
+    print(vacancies_page.__doc__)
     vacancies_all = VacanciesDAO(JSON_VACANCIES_PATH)
     return render_template('vacancies.html', vacancies=vacancies_all.get_all())
 

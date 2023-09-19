@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-vacancies
-{{vacancies}}
+{% for vacation in vacancies%}
+<p> {{vacation.pk}} {{vacation.company}} {{vacation.position}} {{vacation.salary}}</p>
+{% endfor %}
 </body>
 </html>
